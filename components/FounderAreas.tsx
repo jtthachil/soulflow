@@ -5,8 +5,8 @@ import { useState } from "react";
 import { therapists, type Therapist } from "@/lib/content";
 
 function TherapistCard({ t }: { t: Therapist }) {
-  // First area open by default; multiple may be open at once.
-  const [open, setOpen] = useState<number[]>([0]);
+  // Start all collapsed; multiple may be open at once.
+  const [open, setOpen] = useState<number[]>([]);
   const toggle = (i: number) =>
     setOpen((cur) =>
       cur.includes(i) ? cur.filter((x) => x !== i) : [...cur, i]
