@@ -120,7 +120,7 @@ export const founders: Founder[] = [
   {
     id: "sf-founder-2",
     src: "/assets/founder-achintt.png",
-    name: "Achintt",
+    name: "Achintt Kaur",
     role: "Psychologist & Socio-Emotional Skills Trainer · Co-Founder",
     bio: "Achintt works with children, adolescents, young adults and adults, supporting them through emotional, academic and career transitions, with a warm and skills-focused approach.",
   },
@@ -224,6 +224,86 @@ export const specializations: Specialization[] = [
       "Integrative, adapted to you rather than a fixed model",
       "Both professional training and lived experience",
     ],
+  },
+];
+
+// Achintt's specialization areas, from her "Meet Achintt" carousel.
+export const achinttAreas: Specialization[] = [
+  {
+    title: "Adolescent & Adult Wellbeing",
+    items: [
+      "Emotional regulation & self-esteem",
+      "Peer relationships & social challenges",
+      "Exam anxiety & academic pressure",
+      "Identity development",
+    ],
+  },
+  {
+    title: "Career & Direction",
+    items: [
+      "Career confusion & decision-making",
+      "Confidence building",
+      "Life & academic transitions",
+      "Navigating uncertainty about what's next",
+    ],
+  },
+  {
+    title: "Skill & Personality Development",
+    items: [
+      "Communication & interpersonal skills",
+      "Interview preparedness",
+      "Workplace etiquette",
+      "Relationships & problem-solving",
+    ],
+  },
+  {
+    title: "School & Training Spaces",
+    items: [
+      "Counselling for students",
+      "Workshops & capacity-building",
+      "Support for educators",
+      "Student wellbeing sessions",
+    ],
+  },
+  {
+    title: "My Approach",
+    items: [
+      "Emotional safety comes first",
+      "Integrative & person-centred",
+      "Blends therapy with creative, art-based practices",
+      "Building self-awareness, confidence & skills",
+    ],
+  },
+];
+
+export type Therapist = {
+  id: string;
+  src: string;
+  name: string;
+  role: string;
+  intro: string;
+  draft?: boolean;
+  areas: Specialization[];
+};
+
+export const therapists: Therapist[] = [
+  {
+    id: "sf-therapist-yuktika",
+    src: "/assets/founder-yuktika.png",
+    name: "Yuktika Pilania",
+    role: "Psychologist & Corporate Consultant",
+    intro:
+      "Works with young adults, couples and families, plus professionals and organizations.",
+    areas: specializations,
+  },
+  {
+    id: "sf-therapist-achintt",
+    src: "/assets/founder-achintt.png",
+    name: "Achintt Kaur",
+    role: "Psychologist & Socio-Emotional Skills Trainer",
+    intro:
+      "Works with school students, adolescents, young adults and adults across emotional, academic, career and life transitions.",
+    areas: achinttAreas,
   },
 ];
 

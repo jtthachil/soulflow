@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { services, specializations, schedule, quicklinks } from "@/lib/content";
+import FounderAreas from "@/components/FounderAreas";
+import { services, schedule, quicklinks } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Services — SoulFlow India",
@@ -53,43 +54,21 @@ export default function Services() {
         </div>
       </section>
 
-      {/* SPECIALIZATIONS */}
-      <section className="mx-auto max-w-[1200px] px-8 pb-[30px] pt-[10px]">
+      {/* THERAPISTS & FOCUS AREAS */}
+      <section className="mx-auto max-w-[1100px] px-8 pb-[30px] pt-[10px]">
         <div className="mb-[38px] text-center">
           <span className="text-[12px] font-bold uppercase tracking-[2.5px] text-amber">
-            Specializations
+            Who you&apos;ll work with
           </span>
           <h2 className="mb-2 mt-3 font-serif text-[30px] font-semibold sm:text-[34px] md:text-[40px]">
-            Areas we work with
+            Meet your therapists &amp; their focus areas
           </h2>
-          <p className="mx-auto max-w-[560px] text-[15px] leading-[1.7] text-muted">
-            Yuktika&apos;s areas of focus across therapy and consulting, drawing
-            on an integrative training background.
+          <p className="mx-auto max-w-[580px] text-[15px] leading-[1.7] text-muted">
+            Therapy at SoulFlow is led by our two co-founders. Tap any area to
+            see what it covers and find the right fit for you.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-          {specializations.map((sp) => (
-            <div
-              key={sp.title}
-              className="rounded-[18px] border border-ink/[0.07] bg-white px-[26px] py-7"
-            >
-              <h3 className="mb-4 font-serif text-[23px] font-semibold text-ink">
-                {sp.title}
-              </h3>
-              <div>
-                {sp.items.map((it) => (
-                  <div
-                    key={it}
-                    className="mb-[9px] flex items-start gap-[10px] text-[13.5px] leading-[1.55] text-muted"
-                  >
-                    <span className="flex-none leading-[1.4] text-amber">•</span>
-                    <span>{it}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+        <FounderAreas />
       </section>
 
       {/* SCHEDULE */}
