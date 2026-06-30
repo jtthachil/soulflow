@@ -15,7 +15,7 @@ export default function Services() {
         <span className="text-[12px] font-bold uppercase tracking-[2.5px] text-amber">
           Our services
         </span>
-        <h1 className="mx-auto mt-[14px] max-w-[720px] font-serif text-[56px] font-semibold leading-[1.06]">
+        <h1 className="mx-auto mt-[14px] max-w-[720px] font-serif text-[36px] font-semibold leading-[1.08] sm:text-[46px] md:text-[56px] md:leading-[1.06]">
           Support for every step of your journey
         </h1>
         <p className="mx-auto mt-[18px] max-w-[560px] text-[16.5px] leading-[1.75] text-muted">
@@ -59,7 +59,7 @@ export default function Services() {
           <span className="text-[12px] font-bold uppercase tracking-[2.5px] text-amber">
             Specializations
           </span>
-          <h2 className="mb-2 mt-3 font-serif text-[40px] font-semibold">
+          <h2 className="mb-2 mt-3 font-serif text-[30px] font-semibold sm:text-[34px] md:text-[40px]">
             Areas we work with
           </h2>
           <p className="mx-auto max-w-[560px] text-[15px] leading-[1.7] text-muted">
@@ -99,7 +99,7 @@ export default function Services() {
             <span className="text-[12px] font-bold uppercase tracking-[2.5px] text-amber-light">
               Upcoming
             </span>
-            <h2 className="mb-[6px] mt-3 font-serif text-[40px] font-semibold">
+            <h2 className="mb-[6px] mt-3 font-serif text-[30px] font-semibold sm:text-[34px] md:text-[40px]">
               Workshops &amp; group sessions
             </h2>
             <p className="m-0 text-[13.5px] italic text-[#cdd3c2]">
@@ -110,9 +110,9 @@ export default function Services() {
             {schedule.map((e, i) => (
               <div
                 key={i}
-                className="grid grid-cols-[104px_1fr_auto] items-center gap-5 bg-[rgba(247,242,233,0.07)] px-[26px] py-[22px] transition-colors hover:bg-[rgba(247,242,233,0.13)]"
+                className="grid grid-cols-1 gap-3 bg-[rgba(247,242,233,0.07)] px-[26px] py-[22px] transition-colors hover:bg-[rgba(247,242,233,0.13)] sm:grid-cols-[104px_1fr_auto] sm:items-center sm:gap-5"
               >
-                <div className="text-center">
+                <div className="text-left sm:text-center">
                   <div className="font-serif text-[34px] font-bold leading-none text-amber-light">
                     {e.date}
                   </div>
@@ -129,7 +129,7 @@ export default function Services() {
                 </div>
                 <Link
                   href="/contact"
-                  className="cursor-pointer rounded-full bg-amber-light px-[18px] py-[9px] text-[13px] font-bold text-ink no-underline transition-colors hover:bg-white"
+                  className="cursor-pointer justify-self-start rounded-full bg-amber-light px-[18px] py-[9px] text-[13px] font-bold text-ink no-underline transition-colors hover:bg-white sm:justify-self-auto"
                 >
                   Register
                 </Link>
@@ -145,7 +145,7 @@ export default function Services() {
           <span className="text-[12px] font-bold uppercase tracking-[2.5px] text-amber">
             Helpful links
           </span>
-          <h2 className="mt-3 font-serif text-[40px] font-semibold">
+          <h2 className="mt-3 font-serif text-[30px] font-semibold sm:text-[34px] md:text-[40px]">
             Bootcamp &amp; booking
           </h2>
         </div>

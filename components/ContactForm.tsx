@@ -31,21 +31,25 @@ export default function ContactForm() {
         className="flex flex-col gap-4"
       >
         <div>
-          <label className="mb-[6px] block text-[13px] font-semibold">
+          <label htmlFor="cf-name" className="mb-[6px] block text-[13px] font-semibold">
             Your name
           </label>
           <input
+            id="cf-name"
+            name="name"
             required
             placeholder="Full name"
             className="w-full rounded-[12px] border border-[#e2dac9] bg-[#FBF8F1] px-[15px] py-[13px] text-[14.5px] outline-none focus:border-amber"
           />
         </div>
-        <div className="grid grid-cols-2 gap-[14px]">
+        <div className="grid grid-cols-1 gap-[14px] sm:grid-cols-2">
           <div>
-            <label className="mb-[6px] block text-[13px] font-semibold">
+            <label htmlFor="cf-email" className="mb-[6px] block text-[13px] font-semibold">
               Email
             </label>
             <input
+              id="cf-email"
+              name="email"
               type="email"
               required
               placeholder="you@email.com"
@@ -53,20 +57,22 @@ export default function ContactForm() {
             />
           </div>
           <div>
-            <label className="mb-[6px] block text-[13px] font-semibold">
+            <label htmlFor="cf-phone" className="mb-[6px] block text-[13px] font-semibold">
               Phone
             </label>
             <input
+              id="cf-phone"
+              name="phone"
               placeholder="Optional"
               className="w-full rounded-[12px] border border-[#e2dac9] bg-[#FBF8F1] px-[15px] py-[13px] text-[14.5px] outline-none focus:border-amber"
             />
           </div>
         </div>
         <div>
-          <label className="mb-[6px] block text-[13px] font-semibold">
+          <label htmlFor="cf-interest" className="mb-[6px] block text-[13px] font-semibold">
             I&apos;m interested in
           </label>
-          <select className="w-full rounded-[12px] border border-[#e2dac9] bg-[#FBF8F1] px-[15px] py-[13px] text-[14.5px] outline-none focus:border-amber">
+          <select id="cf-interest" name="interest" className="w-full rounded-[12px] border border-[#e2dac9] bg-[#FBF8F1] px-[15px] py-[13px] text-[14.5px] outline-none focus:border-amber">
             <option>Therapy session</option>
             <option>Workshop</option>
             <option>Support group</option>
@@ -76,10 +82,12 @@ export default function ContactForm() {
           </select>
         </div>
         <div>
-          <label className="mb-[6px] block text-[13px] font-semibold">
+          <label htmlFor="cf-message" className="mb-[6px] block text-[13px] font-semibold">
             Message
           </label>
           <textarea
+            id="cf-message"
+            name="message"
             rows={4}
             placeholder="Tell us a little about what you're looking for…"
             className="w-full resize-y rounded-[12px] border border-[#e2dac9] bg-[#FBF8F1] px-[15px] py-[13px] text-[14.5px] outline-none focus:border-amber"

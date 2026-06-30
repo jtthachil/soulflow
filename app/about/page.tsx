@@ -15,14 +15,14 @@ export default function About() {
         <span className="text-[12px] font-bold uppercase tracking-[2.5px] text-amber">
           Our story
         </span>
-        <h1 className="mt-[14px] max-w-[760px] font-serif text-[56px] font-semibold leading-[1.06]">
+        <h1 className="mt-[14px] max-w-[760px] font-serif text-[36px] font-semibold leading-[1.08] sm:text-[46px] md:text-[56px] md:leading-[1.06]">
           Mental health care that feels like coming home.
         </h1>
       </section>
 
       <section className="mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-[54px] px-8 pb-[70px] pt-6 md:grid-cols-2">
         <Image
-          src="/assets/sf-ig-6.png"
+          src="/assets/ph-about.png"
           alt="A gentle moment from SoulFlow"
           width={600}
           height={460}
@@ -60,7 +60,7 @@ export default function About() {
       {/* VALUES */}
       <section className="bg-paper-soft">
         <div className="mx-auto max-w-[1200px] px-8 py-[78px]">
-          <h2 className="mb-[42px] text-center font-serif text-[38px] font-semibold">
+          <h2 className="mb-[42px] text-center font-serif text-[29px] font-semibold sm:text-[33px] md:text-[38px]">
             What we stand for
           </h2>
           <div className="grid grid-cols-1 gap-[22px] md:grid-cols-3">
@@ -85,7 +85,7 @@ export default function About() {
           <span className="text-[12px] font-bold uppercase tracking-[2.5px] text-amber">
             The people
           </span>
-          <h2 className="mb-2 mt-3 font-serif text-[40px] font-semibold">
+          <h2 className="mb-2 mt-3 font-serif text-[30px] font-semibold sm:text-[34px] md:text-[40px]">
             Meet the founders
           </h2>
           <p className="m-0 text-[14px] italic text-faint">

@@ -9,10 +9,10 @@ export default function Home() {
       {/* HERO */}
       <section className="mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-14 px-8 pb-16 pt-[72px] md:grid-cols-[1.05fr_0.95fr]">
         <div>
-          <p className="m-0 mb-[10px] font-script text-[30px] text-amber">
+          <p className="m-0 mb-[10px] font-script text-[26px] text-amber sm:text-[30px]">
             A space to heal, learn &amp; grow
           </p>
-          <h1 className="m-0 mb-[22px] font-serif text-[68px] font-semibold leading-[1.02] tracking-[-0.5px]">
+          <h1 className="m-0 mb-[22px] font-serif text-[clamp(2.5rem,11vw,68px)] font-semibold leading-[1.05] tracking-[-0.5px] md:leading-[1.02]">
             Mental health,
             <br />
             held with warmth.
@@ -101,7 +101,7 @@ export default function Home() {
         <span className="text-[12px] font-bold uppercase tracking-[2.5px] text-amber">
           Who we are
         </span>
-        <h2 className="mx-auto mt-4 max-w-[760px] font-serif text-[42px] font-semibold leading-[1.18]">
+        <h2 className="mx-auto mt-4 max-w-[760px] font-serif text-[30px] font-semibold leading-[1.18] sm:text-[36px] md:text-[42px]">
           A gentle space to pause, breathe, and reconnect with yourself.
         </h2>
         <p className="mx-auto mt-[22px] max-w-[640px] text-[16.5px] leading-[1.8] text-muted">
@@ -125,7 +125,7 @@ export default function Home() {
               <span className="text-[12px] font-bold uppercase tracking-[2.5px] text-amber">
                 What we offer
               </span>
-              <h2 className="mt-3 font-serif text-[40px] font-semibold">
+              <h2 className="mt-3 font-serif text-[30px] font-semibold sm:text-[34px] md:text-[40px]">
                 Ways we can support you
               </h2>
             </div>
@@ -163,7 +163,7 @@ export default function Home() {
           <span className="text-[12px] font-bold uppercase tracking-[2.5px] text-amber">
             Kind words
           </span>
-          <h2 className="mt-3 font-serif text-[40px] font-semibold">
+          <h2 className="mt-3 font-serif text-[30px] font-semibold sm:text-[34px] md:text-[40px]">
             From the people we&apos;ve held space for
           </h2>
         </div>

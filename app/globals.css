@@ -28,6 +28,10 @@ body {
   color: var(--color-ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  /* `clip` (not `hidden`) guards against horizontal scroll without
+     turning the body into a scroll container that would break the
+     sticky header. */
+  overflow-x: clip;
 }
 
 ::selection {

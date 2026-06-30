@@ -27,8 +27,9 @@ export default function Newsletter() {
           <input
             type="email"
             required
+            aria-label="Email address"
             placeholder="your@email.com"
-            className="min-w-[180px] flex-1 rounded-full border border-[#4a443b] bg-ink-soft px-5 py-[15px] text-[14.5px] text-paper outline-none"
+            className="min-w-[180px] flex-1 rounded-full border border-[#4a443b] bg-ink-soft px-5 py-[15px] text-[14.5px] text-paper outline-none focus:border-amber-light"
           />
           <button
             type="submit"

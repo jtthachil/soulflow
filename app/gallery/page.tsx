@@ -14,7 +14,7 @@ export default function Gallery() {
         <span className="text-[12px] font-bold uppercase tracking-[2.5px] text-amber">
           @soulflowindia
         </span>
-        <h1 className="mb-2 mt-[14px] font-serif text-[56px] font-semibold">
+        <h1 className="mb-2 mt-[14px] font-serif text-[38px] font-semibold sm:text-[46px] md:text-[56px]">
           From our Instagram
         </h1>
         <p className="m-0 text-[15px] text-muted">

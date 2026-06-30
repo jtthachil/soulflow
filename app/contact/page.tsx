@@ -15,7 +15,7 @@ export default function Contact() {
           <span className="text-[12px] font-bold uppercase tracking-[2.5px] text-amber">
             Get in touch
           </span>
-          <h1 className="mb-[18px] mt-[14px] font-serif text-[50px] font-semibold leading-[1.06]">
+          <h1 className="mb-[18px] mt-[14px] font-serif text-[36px] font-semibold leading-[1.08] sm:text-[44px] md:text-[50px] md:leading-[1.06]">
             Let&apos;s begin,
             <br />
             gently.
