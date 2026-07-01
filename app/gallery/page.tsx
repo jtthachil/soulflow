@@ -24,12 +24,14 @@ export default function Gallery() {
 
       <section className="mx-auto max-w-[1100px] px-8 pb-[70px] pt-[10px]">
         <div className="grid grid-cols-2 gap-[14px] sm:grid-cols-3 md:grid-cols-4">
-          {gallery.map((g) => (
+          {gallery.map((g, i) => (
             <a
               key={g.id}
               href="https://www.instagram.com/soulflowindia/"
               target="_blank"
               rel="noopener noreferrer"
+              data-reveal
+              data-reveal-delay={`${(i % 4) * 70}ms`}
               className="block overflow-hidden rounded-[14px]"
             >
               <Image

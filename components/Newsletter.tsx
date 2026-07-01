@@ -7,7 +7,10 @@ export default function Newsletter() {
 
   return (
     <section className="mx-auto max-w-[1200px] px-8 pb-[90px]">
-      <div className="grid grid-cols-1 items-center gap-10 rounded-[28px] bg-ink px-12 py-[60px] text-paper md:grid-cols-[1.1fr_0.9fr]">
+      <div
+        data-reveal
+        className="grid grid-cols-1 items-center gap-10 rounded-[28px] bg-ink px-8 py-[48px] text-paper sm:px-12 sm:py-[60px] md:grid-cols-[1.1fr_0.9fr]"
+      >
         <div>
           <h2 className="m-0 mb-3 font-serif text-[38px] font-semibold leading-[1.15]">
             Letters for the soul

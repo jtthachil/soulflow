@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
@@ -11,7 +12,7 @@ export default function Contact() {
   return (
     <div>
       <section className="mx-auto grid max-w-[1100px] grid-cols-1 gap-14 px-8 pb-20 pt-[72px] md:grid-cols-[0.9fr_1.1fr]">
-        <div>
+        <div data-reveal>
           <span className="text-[12px] font-bold uppercase tracking-[2.5px] text-amber">
             Get in touch
           </span>
@@ -90,7 +91,9 @@ export default function Contact() {
           </div>
         </div>
 
-        <ContactForm />
+        <Suspense fallback={null}>
+          <ContactForm />
+        </Suspense>
       </section>
     </div>
   );

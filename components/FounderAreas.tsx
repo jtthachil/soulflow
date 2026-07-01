@@ -1,10 +1,11 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { therapists, type Therapist } from "@/lib/content";
 
-function TherapistCard({ t }: { t: Therapist }) {
+function TherapistCard({ t, index }: { t: Therapist; index: number }) {
   // Start all collapsed; multiple may be open at once.
   const [open, setOpen] = useState<number[]>([]);
   const toggle = (i: number) =>
@@ -12,8 +13,14 @@ function TherapistCard({ t }: { t: Therapist }) {
       cur.includes(i) ? cur.filter((x) => x !== i) : [...cur, i]
     );
 
+  const firstName = t.name.split(" ")[0];
+
   return (
-    <div className="flex flex-col rounded-[22px] border border-ink/[0.07] bg-white p-6 shadow-[0_18px_44px_-30px_rgba(44,40,35,0.45)] sm:p-7">
+    <div
+      data-reveal
+      data-reveal-delay={`${index * 90}ms`}
+      className="flex flex-col rounded-[22px] border border-ink/[0.07] bg-white p-6 shadow-[0_18px_44px_-30px_rgba(44,40,35,0.45)] sm:p-7"
+    >
       {/* Header */}
       <div className="flex items-center gap-4">
         <div className="relative h-[68px] w-[68px] flex-none">
@@ -107,6 +114,18 @@ function TherapistCard({ t }: { t: Therapist }) {
           );
         })}
       </div>
+
+      {/* CTA */}
+      <div className="mt-auto pt-6">
+        <Link
+          href={`/contact?interest=${encodeURIComponent(
+            "Therapy session"
+          )}&therapist=${encodeURIComponent(firstName)}`}
+          className="flex w-full items-center justify-center gap-2 rounded-full bg-amber px-6 py-[13px] text-[14px] font-bold text-white no-underline transition-colors hover:bg-ink"
+        >
+          Book with {firstName} →
+        </Link>
+      </div>
     </div>
   );
 }
@@ -114,8 +133,8 @@ function TherapistCard({ t }: { t: Therapist }) {
 export default function FounderAreas() {
   return (
     <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-      {therapists.map((t) => (
-        <TherapistCard key={t.id} t={t} />
+      {therapists.map((t, i) => (
+        <TherapistCard key={t.id} t={t} index={i} />
       ))}
     </div>
   );

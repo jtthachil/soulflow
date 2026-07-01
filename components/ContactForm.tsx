@@ -1,9 +1,35 @@
 "use client";
 
 import { useState } from "react";
+import { useSearchParams } from "next/navigation";
+
+const INTERESTS = [
+  "Therapy session",
+  "Workshop",
+  "Support group",
+  "Internship",
+  "Training programme",
+  "Psychology Bootcamp",
+  "Something else",
+];
 
 export default function ContactForm() {
   const [sent, setSent] = useState(false);
+  const params = useSearchParams();
+
+  const interestParam = params.get("interest");
+  const interest =
+    interestParam && INTERESTS.includes(interestParam)
+      ? interestParam
+      : undefined;
+
+  const therapist = params.get("therapist");
+  const event = params.get("event");
+  const prefilledMessage = therapist
+    ? `Hi, I'd like to book a session with ${therapist}.`
+    : event
+      ? `Hi, I'd like to register for "${event}".`
+      : undefined;
 
   if (sent) {
     return (
@@ -72,13 +98,15 @@ export default function ContactForm() {
           <label htmlFor="cf-interest" className="mb-[6px] block text-[13px] font-semibold">
             I&apos;m interested in
           </label>
-          <select id="cf-interest" name="interest" className="w-full rounded-[12px] border border-[#e2dac9] bg-[#FBF8F1] px-[15px] py-[13px] text-[14.5px] outline-none focus:border-amber">
-            <option>Therapy session</option>
-            <option>Workshop</option>
-            <option>Support group</option>
-            <option>Internship</option>
-            <option>Training programme</option>
-            <option>Something else</option>
+          <select
+            id="cf-interest"
+            name="interest"
+            defaultValue={interest}
+            className="w-full rounded-[12px] border border-[#e2dac9] bg-[#FBF8F1] px-[15px] py-[13px] text-[14.5px] outline-none focus:border-amber"
+          >
+            {INTERESTS.map((opt) => (
+              <option key={opt}>{opt}</option>
+            ))}
           </select>
         </div>
         <div>
@@ -89,6 +117,7 @@ export default function ContactForm() {
             id="cf-message"
             name="message"
             rows={4}
+            defaultValue={prefilledMessage}
             placeholder="Tell us a little about what you're looking for…"
             className="w-full resize-y rounded-[12px] border border-[#e2dac9] bg-[#FBF8F1] px-[15px] py-[13px] text-[14.5px] outline-none focus:border-amber"
           />

@@ -27,9 +27,11 @@ export default function Services() {
 
       <section className="mx-auto max-w-[1200px] px-8 pb-20">
         <div className="grid grid-cols-1 gap-[22px] md:grid-cols-2">
-          {services.map((s) => (
+          {services.map((s, i) => (
             <div
               key={s.no}
+              data-reveal
+              data-reveal-delay={`${(i % 2) * 90}ms`}
               className="flex items-start gap-[22px] rounded-[20px] border border-ink/[0.07] bg-white px-8 py-[34px] transition-shadow hover:shadow-[0_18px_40px_-24px_rgba(44,40,35,0.4)]"
             >
               <div className="flex h-[54px] w-[54px] flex-none items-center justify-center rounded-[14px] bg-paper-soft font-serif text-[26px] font-bold text-sage">
@@ -43,7 +45,7 @@ export default function Services() {
                   {s.long}
                 </p>
                 <Link
-                  href="/contact"
+                  href={`/contact?interest=${encodeURIComponent(s.interest)}`}
                   className="cursor-pointer text-[14px] font-bold text-amber no-underline transition-colors hover:text-ink"
                 >
                   Enquire →
@@ -85,7 +87,7 @@ export default function Services() {
               Sample schedule · update with your live dates
             </p>
           </div>
-          <div className="flex flex-col gap-[2px] overflow-hidden rounded-[18px]">
+          <div data-reveal className="flex flex-col gap-[2px] overflow-hidden rounded-[18px]">
             {schedule.map((e, i) => (
               <div
                 key={i}
@@ -107,7 +109,11 @@ export default function Services() {
                   </div>
                 </div>
                 <Link
-                  href="/contact"
+                  href={`/contact?interest=${encodeURIComponent(
+                    e.title.includes("Bootcamp")
+                      ? "Psychology Bootcamp"
+                      : "Workshop"
+                  )}&event=${encodeURIComponent(e.title)}`}
                   className="cursor-pointer justify-self-start rounded-full bg-amber-light px-[18px] py-[9px] text-[13px] font-bold text-ink no-underline transition-colors hover:bg-white sm:justify-self-auto"
                 >
                   Register
@@ -128,7 +134,10 @@ export default function Services() {
             Bootcamp &amp; booking
           </h2>
         </div>
-        <div className="rounded-[24px] bg-ink px-[30px] py-[18px] shadow-[0_22px_50px_-34px_rgba(44,40,35,0.6)]">
+        <div
+          data-reveal
+          className="rounded-[24px] bg-ink px-5 py-[14px] shadow-[0_22px_50px_-34px_rgba(44,40,35,0.6)] sm:px-[30px] sm:py-[18px]"
+        >
           {quicklinks.map((q, i) => {
             const isExternal = q.target === "_blank";
             const className =

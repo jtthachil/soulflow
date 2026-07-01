@@ -5,6 +5,7 @@ export type Service = {
   name: string;
   desc: string;
   long: string;
+  interest: string;
 };
 
 export const services: Service[] = [
@@ -13,36 +14,42 @@ export const services: Service[] = [
     name: "Therapy",
     desc: "One-on-one online sessions in a confidential, judgement-free space.",
     long: "Personalised, evidence-based one-on-one therapy, online and confidential. Work through anxiety, relationships, life transitions and more, at your own pace.",
+    interest: "Therapy session",
   },
   {
     no: "02",
     name: "Workshops",
     desc: "Themed group sessions on healing, growth and everyday wellbeing.",
     long: "Interactive group workshops on themes like self-compassion, boundaries, anxiety and mindful living, with practical tools you can carry into daily life.",
+    interest: "Workshop",
   },
   {
     no: "03",
     name: "Support Groups",
     desc: "Safe, facilitated circles to share, connect and feel less alone.",
     long: "Facilitated peer circles where you can share openly and find community. A gentle reminder that you are never alone in what you carry.",
+    interest: "Support group",
   },
   {
     no: "04",
     name: "Internships",
     desc: "Hands-on experience for aspiring mental health professionals.",
     long: "Structured, mentored internships giving psychology students real exposure to clinical and community work, and a meaningful start to their careers.",
+    interest: "Internship",
   },
   {
     no: "05",
     name: "Training",
     desc: "Skill-building programmes for students and practitioners.",
     long: "Professional training and skill-building programmes, from foundational psychology bootcamps to advanced practitioner workshops.",
+    interest: "Training programme",
   },
   {
     no: "06",
     name: "Psychology Bootcamp",
     desc: "An intensive introduction to the world of psychology.",
     long: "An immersive bootcamp covering core concepts, real-world applications and career pathways, perfect for anyone curious about psychology.",
+    interest: "Psychology Bootcamp",
   },
 ];
 
@@ -136,29 +143,29 @@ export type ScheduleEntry = {
 
 export const schedule: ScheduleEntry[] = [
   {
-    date: "15",
-    my: "Jun 2026",
+    date: "13",
+    my: "Jul 2026",
     day: "Monday",
     title: "Mindful Mondays: Support Group",
     meta: "7:00 PM IST · Online · Free",
   },
   {
-    date: "17",
-    my: "Jun 2026",
+    date: "15",
+    my: "Jul 2026",
     day: "Wednesday",
     title: "Understanding Anxiety: Workshop",
     meta: "6:30 PM IST · Online",
   },
   {
-    date: "19",
-    my: "Jun 2026",
+    date: "17",
+    my: "Jul 2026",
     day: "Friday",
     title: "Psychology Bootcamp 2026: New batch begins",
     meta: "5:00 PM IST · Online",
   },
   {
-    date: "20",
-    my: "Jun 2026",
+    date: "18",
+    my: "Jul 2026",
     day: "Saturday",
     title: "Inner Child Healing: Workshop",
     meta: "11:00 AM IST · Online",

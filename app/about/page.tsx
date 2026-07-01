@@ -26,9 +26,10 @@ export default function About() {
           alt="A gentle moment from SoulFlow"
           width={600}
           height={460}
+          data-reveal
           className="block h-[460px] w-full rounded-[24px] object-cover shadow-[0_26px_56px_-26px_rgba(44,40,35,0.45)]"
         />
-        <div>
+        <div data-reveal data-reveal-delay="90ms">
           <p className="m-0 mb-[18px] text-[16.5px] leading-[1.8] text-ink-soft">
             SoulFlow was shaped by a shared belief: that healing doesn&apos;t
             only happen through conversation. It happens in pauses. In images. In
@@ -64,8 +65,13 @@ export default function About() {
             What we stand for
           </h2>
           <div className="grid grid-cols-1 gap-[22px] md:grid-cols-3">
-            {values.map((v) => (
-              <div key={v.title} className="rounded-[18px] bg-paper px-7 py-[30px]">
+            {values.map((v, i) => (
+              <div
+                key={v.title}
+                data-reveal
+                data-reveal-delay={`${i * 90}ms`}
+                className="rounded-[18px] bg-paper px-7 py-[30px]"
+              >
                 <div className="font-serif text-[30px] text-amber">{v.sym}</div>
                 <h3 className="mb-2 mt-[10px] font-serif text-[24px] font-semibold">
                   {v.title}
@@ -93,9 +99,11 @@ export default function About() {
           </p>
         </div>
         <div className="mx-auto grid max-w-[760px] grid-cols-1 gap-7 sm:grid-cols-2">
-          {founders.map((f) => (
+          {founders.map((f, i) => (
             <div
               key={f.id}
+              data-reveal
+              data-reveal-delay={`${i * 90}ms`}
               className="rounded-[22px] bg-[linear-gradient(165deg,#F5ECDC,#EAD9BE)] px-7 pb-8 pt-[38px] text-center"
             >
               <div className="relative mx-auto mb-5 h-[174px] w-[174px]">
